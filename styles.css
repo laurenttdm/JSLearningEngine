@@ -1,0 +1,50 @@
+@CHARSET "UTF-8";
+
+html, body {
+      background-color: black;
+}
+button {
+	margin: 5px;
+	margin-right: 12px;
+	margin-left: 0;
+	padding: 10px;
+	font-size: large;
+	border-radius: 5px;
+	border: 1px solid #d43;
+	background-color: #d43;
+	color: white;
+}
+
+button:active {
+	border: 1px solid blue !important;
+}
+
+button:hover {
+	border: 1px solid red !important;
+}
+
+#buttonDiv {
+	text-align: center;
+	padding-top: 2em;
+}
+
+iframe {
+	height: 100%;
+	width: 100%;
+	border: 1px solid #ccc;
+}
+#left {
+	float:left;
+	width: 500px;
+}
+#right {
+	background-color: #ffffff;
+	float:right;
+	margin: 0;
+    padding:0;
+    overflow: hidden;
+}
+.blocklySvg {
+      height: 600px;
+      width: 600px;
+}

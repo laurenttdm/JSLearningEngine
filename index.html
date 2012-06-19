@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Javascript KS3</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="container">
+		<div id="left" style="width: 480px;">
+			<div id="fps" style="float: right;">
+				<font color="#FFFFFF"
+					, style="font-size: 10px; font-family: Courier New"> <span
+					id="framecounter">(0/0 fps)</span>
+				</font>
+			</div>
+
+			<!--  This is where the application starts -->
+			<div id="gameapp">
+				<script>
+					/*
+					 * game resources This global variables stores the game resource definition
+					 */
+					var g_resources = [
+							{
+								name: "player",
+								type: "image",
+								src: "data/sprites/playersprite.png"
+							}, {
+								name: "tiles",
+								type: "image",
+								src: "data/tiles/tiles.png"
+							}, {
+								name: "metatiles",
+								type: "image",
+								src: "data/tiles/metatiles.png"
+							}, {
+								name: "level1",
+								type: "tmx",
+								src: "data/tiles/level1.tmx"
+							}
+					];
+				</script>
+				<script type="text/javascript" src="lib/melonJS-0.9.3.js"></script>
+				<script type="text/javascript" src="entities.js"></script>
+				<script type="text/javascript" src="lib/google_blockly.js"></script>
+				<script type="text/javascript"
+					src="lib/google-blockly/generators/javascript.js"></script>
+				<script type="text/javascript"
+					src="lib/google-blockly/generators/javascript/control.js"></script>
+				<script type="text/javascript"
+					src="lib/google-blockly/generators/javascript/logic.js"></script>
+				<script type="text/javascript"
+					src="lib/google-blockly/generators/javascript/math.js"></script>
+				<script type="text/javascript"
+					src="lib/google-blockly/generators/javascript/variables.js"></script>
+
+				<script type="text/javascript" src="turtle-language.js"></script>
+				<script type="text/javascript"
+					src="lib/google-blockly/language/en/control.js"></script>
+				<script type="text/javascript"
+					src="lib/google-blockly/language/en/logic.js"></script>
+				<script type="text/javascript"
+					src="lib/google-blockly/language/en/math.js"></script>
+				<script type="text/javascript"
+					src="lib/google-blockly/language/en/variables.js"></script>
+
+				<script type="text/javascript" src="cas-turtle-engine.js"></script>
+				<script type="text/javascript" src="cas-turtle-language-impl.js"></script>
+			</div>
+			<div id="buttonDiv">
+				<button id="runButton" onclick="Turtle.runButtonClick();">Run
+					Program</button>
+				<button id="resetButton" onclick="Turtle.resetButtonClick();"
+					style="display: none">&nbsp; Reset &nbsp;</button>
+				<small>[<a href="javascript:void(Turtle.showCode())">See
+						generated JavaScript code.</a>]
+				</small>
+			</div>
+
+
+		</div>
+		<div id="right">
+			<div id="blockycontent"></div>
+		</div>
+	</div>
+</body>
+</html>
