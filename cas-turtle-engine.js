@@ -56,15 +56,6 @@ var jsApp = {
 		// load everything & display a loading screen
 		me.state.change(me.state.LOADING);
 
-		// Strip out unneeded blocks.
-		delete Blockly.Language.controls_forEach;
-		delete Blockly.Language.controls_whileUntil;
-		delete Blockly.Language.controls_flow_statements;
-		// Add the blocky code
-		Blockly.inject(document.getElementById('right'), {
-			path: 'lib/google-blockly/'
-		});
-
 		me.sys.gravity = 0;
 
 	},

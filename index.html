@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Javascript KS3</title>
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -45,15 +46,6 @@
 				<script type="text/javascript" src="lib/google_blockly.js"></script>
 				<script type="text/javascript"
 					src="lib/google-blockly/generators/javascript.js"></script>
-				<script type="text/javascript"
-					src="lib/google-blockly/generators/javascript/control.js"></script>
-				<script type="text/javascript"
-					src="lib/google-blockly/generators/javascript/logic.js"></script>
-				<script type="text/javascript"
-					src="lib/google-blockly/generators/javascript/math.js"></script>
-				<script type="text/javascript"
-					src="lib/google-blockly/generators/javascript/variables.js"></script>
-
 				<script type="text/javascript" src="turtle-language.js"></script>
 				<script type="text/javascript"
 					src="lib/google-blockly/language/en/control.js"></script>
@@ -82,6 +74,11 @@
 		<div id="right">
 			<div id="blockycontent"></div>
 		</div>
+		<script type="text/javascript">
+			Blockly.inject(document.getElementById('right'), {
+				path: 'lib/google-blockly/'
+			});
+		</script>
 	</div>
 </body>
 </html>

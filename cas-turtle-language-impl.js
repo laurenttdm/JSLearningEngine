@@ -28,3 +28,15 @@ CTurtle.prototype.turn = function(dirname,id)
 
 var Turtle= new CTurtle();
 
+
+// Whitelist of blocks to keep.
+var newLanguage = {};
+var keepers = ['turtle_forward', 'turtle_turn', 'controls_whileUntil',
+         'logic_operation', 'logic_negate', 'math_number','math_arithmetic'];
+for (var x = 0; x < keepers.length; x++) {
+       newLanguage[keepers[x]] = Blockly.Language[keepers[x]];
+}
+Blockly.Language = newLanguage;
+
+
+

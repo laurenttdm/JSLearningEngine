@@ -23,7 +23,7 @@ Blockly.Language.turtle_forward = {
   helpUrl: '',
   init: function() {
     this.setColour(290);
-    this.addTitle('forward');
+    this.appendTitle('forward');
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip('Moves forward one space.');
@@ -41,11 +41,11 @@ Blockly.Language.turtle_turn = {
   helpUrl: '',
   init: function() {
     this.setColour(290);
-    this.addTitle('turn');
+    this.appendTitle('turn');
     var dropdown = new Blockly.FieldDropdown(function() {
       return Blockly.Language.turtle_turn.DIRECTIONS;
     });
-    this.addTitle(dropdown);
+    this.appendTitle(dropdown);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip('Turns left or right by 90 degrees.');
